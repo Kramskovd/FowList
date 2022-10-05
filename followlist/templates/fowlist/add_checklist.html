@@ -1,0 +1,17 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+{% block script %}
+<script src="{% static 'fowlist/js/list.js' %}"></script>
+{% endblock %}
+{% block content %}
+<div class="default-list list container-create-checklist">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a id="create-point"><img src="{% static 'fowlist/img/Component 5.svg' %}"><span>добавить</span></a>
+        <ul class="points">
+        </ul>
+        <input type="submit" class="button-create-checklist" value="создать">
+    </form>
+</div>
+{% endblock %}

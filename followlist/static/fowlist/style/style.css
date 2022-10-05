@@ -1,0 +1,351 @@
+.add-checklist{
+    display: block;
+    width: 19px;
+    height: 19px;
+    background-color: black;
+    cursor : pointer;
+}
+#create-point img{
+    vertical-align: -7px;
+}
+#create-point span{
+    margin-left: 5px;
+}
+select{
+    background-color: #f0fe4e;;
+    border: None;
+    border-radius: 5px;
+    padding: 4px 4px;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+a:visited{
+    color: #000;
+}
+body{
+    font-family: "Raleway-SemiBold";
+    position: relative;
+    margin: 0;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+.header-logo{
+    font-size: 38px;
+    font-family: "roundedmplus1c";
+}
+header{
+    height: 100px;
+}
+header, .main-container{
+    margin: 0 80px;
+}
+.custom-checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin-right: 0.5em;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+.custom-checkbox:checked+label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+.header-element{
+    display: inline-block;
+}
+.container-header .header-element-right div{
+    margin-top: 38px;
+    margin-right: 25px;
+}
+.container-header .header-menu-button{
+    display: inline-block;
+    font-family: "Roboto";
+    font-size: 18px;
+    padding: 12px 20px;
+    background-color: #8FC19A;
+    color: #fff;
+    border-radius: 43px;
+
+}
+.container-header .header-element-right .header-menu-account{
+    font-family: "Raleway-SemiBold";
+    font-size: 30px;
+}
+.container-header{
+    margin-top
+}
+.container-header .header-menu-button a{
+    color: #fff;
+}
+.container-header .header-element-right{
+    float: right;
+
+}
+.container-header .header-element-left{
+    float: left;
+
+}
+.main-container{
+    margin-top: 20px;
+}
+.main-container .container-start-page .greeting-block{
+    border-radius: 50px;
+    font-family: "Raleway-Regular";
+    font-size: 26px;
+    padding: 10px 30px 10px 30px;
+}
+.main-container .container-start-page .block-info{
+    background-color: #A9A7EF;
+    color: #000;
+    width: 400px;
+}
+.main-container .container-start-page .block-call-to-action{
+    background-color: #DE7575;
+    color: #fff;
+    width: 300px;
+    margin-top: 20px;
+}
+.main-container .container-start-page .wrap-greeting-block, .main-container .container-start-page .example{
+    display: inline-block;
+}
+.main-container .container-start-page{
+    margin: 0 100px;
+}
+.main-container .container-start-page .example{
+    vertical-align: top;
+    margin-left: 200px;
+}
+.default-list{
+    border-radius: 23px;
+    width: 240px;
+    min-height: 320px;
+    padding: 28px;
+    vertical-align: middle;
+}
+.button-create-list{
+    cursor: pointer;
+    vertical-align: -5px;
+    padding-left: 11px;
+    display: inline-block;
+}
+.default-list .name-list{
+    font-size: 16px;
+    font-family: "Raleway-ExtraBold";
+}
+.default-list .points{
+    font-size: 14px;
+    font-family: "Raleway-SemiBold";
+}
+.default-list .points li{
+    margin: 3px 0 3px 3px;
+}
+.list{
+    background-color: #FFF387;
+}
+.dolist{
+    background-color: #E18DEF;
+}
+.goal{
+    background-color: #AAEEA5;
+    display: inline-block;
+    padding: 12px 30px 12px 18px;
+    border-radius: 10px;
+    margin: 22px 10px;
+    position: relative;
+}
+.join-platform{
+    margin-top: 20px;
+}
+.join-platform .button-join{
+    font-size: 22px;
+    font-family: "Raleway-ExtraBold";
+    padding: 20px 10px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    border-radius: 25px;
+    width: 280px;
+    border: 5px solid #97E47C;
+}
+.base-list .default-list{
+    display: inline-block;
+    margin: 22px 10px;
+    position: relative;
+}
+.base-list{
+    width: 1000px;
+    margin: 0 auto;
+}
+.base-list .goal .name-goal{
+    margin-left: 2px;
+}
+
+.input-point{
+    margin-bottom: 5px;
+}
+.container-create-checklist{
+    margin: 0 auto;
+}
+.container-create-checklist .name-list-input, .input-point{
+    border-top: None;
+    border-right: None;
+    border-left: None;
+    background: None;
+    border-bottom: 1px solid #000;
+}
+.container-create-checklist input:focus{
+    outline: None;
+}
+.button-create-checklist{
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+}
+#create-goal{
+    width: 240px;
+    display: block;
+}
+.goal .delete{
+    width: 16px;
+    height: 16px;
+    top: 14px;
+    right: 8px;
+}
+.delete{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    cursor: pointer;
+}
+.edit{
+    cursor: pointer;
+    position: absolute;
+    right: 45px;
+    top: 13px;
+    width: 20px;
+    height: 20px;
+}
+.container-edit-list{
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    height: 100%;
+	width: 100%;
+    top:0;
+}
+.form-edit-list{
+    width: 500px;
+    min-height: 200px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+}
+.form-edit-list input{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+.form-edit-list .input-edit-list-name{
+    font-size: 20px;
+}
+.form-edit-list .input-edit-list-point{
+    list-style-type: circle;
+    margin: 15px 10px 15px 0;
+    font-size: 14px;
+}
+.form-edit-list ul{
+    list-style-type: circle;
+}
+.form-edit-list .button-edit-list{
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #fff;
+}
+.cancel{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    height: 20px;
+    cursor: pointer;
+}
+.cancel img{
+    width: 18px;
+    height: 18px;
+}
+.all-lists{
+    width: 1000px;
+    margin: 0 auto;
+}
+.default-list{
+    position: relative;
+}
+.all-lists ul{
+    list-style-type: disc;
+}
+.all-lists .default-list{
+    display: inline-block;
+    margin: 22px 10px;
+}
+.add-list{
+    position: absolute;
+    right: 18px;
+    top: 14px;
+}
+.container-form-registration{
+    width: 300px;
+    margin: 0 auto;
+}
+.container-form-registration .join-input{
+    border-top: 0;
+    width: 100%;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #000;
+    padding: 5px;
+    margin: 10px 0;
+}
+.submit-join{
+    background-color: #8FC19A;
+    color: #fff;
+    border: 0;
+    margin: 0 auto;
+    display: block;
+    padding: 5px 7px;
+    border-radius: 3px;
+}
+

@@ -1,0 +1,54 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+
+{% block script %}<script src="{% static 'fowlist/js/profile.js' %}"></script>{% endblock %}
+
+{% block content %}
+<h3><span>Чек-лист</span><a class="button-create-list" href="/profile/create-checklist"><img src="{% static 'fowlist/img/Component 5.svg' %}"></a></h3>
+<div class="base-list">
+    {% for l in checklist %}
+        <div class="default-list list">
+            <span class="edit-list"><img class="edit" id="edit-list{{ l.0.pk }}" src="{% static 'fowlist/img/pen.png' %}"></span>
+            <span class="delete-list"><img class="delete" id="delete-list{{ l.0.pk }}" src="{% static 'fowlist/img/icons8-trash.svg' %}" ></span>
+            <div class="name-list"><p>{{ l.0 }}</p></div>
+            <div class="points">
+                <ul>
+                    {% for p in l.1 %}
+                        <li><input id="list{{ p.pk }}" class="point-checklist custom-checkbox" value="{{ p.pk }}" type="checkbox" {% if p.is_done %} checked {% endif %} ><label
+                                for="list{{ p.pk }}">{{ p.name_point }}</label></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<h3><span>Цели</span><a class="button-create-list" href="/profile/create-goal"><img src="{% static 'fowlist/img/Component 5.svg' %}"></a></h3>
+<div class="base-list">
+    {% for g in goals %}
+    <div class="goal">
+        <span class="delete-goal"><img class="delete" id="delete-goal{{ g.pk }}" src="{% static 'fowlist/img/icons8-trash.svg' %}" ></span>
+        <input id="goal{{ g.pk }}" class="point-goal custom-checkbox" value="{{ g.pk }}" type="checkbox" {% if g.is_done %} checked {% endif %}>
+        <label for="goal{{ g.pk }}" class="name-goal">{{ g.name_goal }}</label>
+    </div>
+    {% endfor %}
+</div>
+<h3><span>Дела</span><a class="button-create-list" href="/profile/create-checklist"><img src="{% static 'fowlist/img/Component 5.svg' %}"></a></h3>
+<div class="base-list">
+    {% for l in dolist %}
+        <div class="default-list dolist">
+            <span class="edit-list"><img class="edit" id="edit-dolist{{ l.0.pk }}" src="{% static 'fowlist/img/pen.png' %}"></span>
+            <span class="delete-list"><img class="delete" id="delete-dolist{{ l.0.pk }}" src="{% static 'fowlist/img/icons8-trash.svg' %}" ></span>
+            <div class="name-list"><p>{{ l.0 }}</p></div>
+            <div class="points">
+                <ul>
+                    {% for p in l.1 %}
+                         <li><input id="dolist{{ p.pk }}" class="point-checklist custom-checkbox" value="{{ p.pk }}" type="checkbox" {% if p.is_done %} checked {% endif %}>
+                             <label for="dolist{{ p.pk }}">{{ p.name_point }}</label></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

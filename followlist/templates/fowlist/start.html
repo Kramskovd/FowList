@@ -1,0 +1,31 @@
+{% extends 'layout/basic.html' %}
+
+{% block content %}
+<div class="container-start-page">
+  <div class="wrap-greeting-block">
+      <div class="greeting-block block-info">
+        <p>FowList - простой помощник для создания списка дел, покупок и ваших целей</p>
+      </div>
+      <div class="greeting-block block-call-to-action">
+        <p>Делись своими списками с окружающими</p>
+      </div>
+  </div>
+  <div class="example">
+    <div class="default-list list">
+      <div class="name-list"><p>Мой чек лист для выживания в лесу</p></div>
+      <div class="points">
+        <ul>
+          <li>Спички</li>
+          <li>Масло</li>
+          <li>Бананы</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<div class="join-platform">
+  <a class="button-join" href="/register">Начать пользоваться</a>
+</div>
+</div>
+
+
+{% endblock %}

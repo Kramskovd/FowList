@@ -1,0 +1,4 @@
+Уважаемый пользователь
+
+подвердите
+{{ host }}{% url 'fowlist:register-activate' sign=sign %}

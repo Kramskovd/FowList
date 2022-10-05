@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}FowList{% endblock %}</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% block script %}{% endblock %}
+    <link rel="stylesheet" href="{% static '/fowlist/style/style.css' %}">
+    <link rel="stylesheet" href="{% static '/fowlist/style/fonts.css' %}">
+</head>
+<body>
+
+<header>
+    <div class="container-header">
+        <div class="header-element header-element-left">
+            {% if user.is_authenticated == False%}
+            <h1 class="header-logo"><a href="/">FowList</a></h1>
+            {% else %}
+            <h1 class="header-logo"><a href="/profile">FowList</a></h1>
+            {% endif %}
+        </div>
+        <div class="header-element header-element-right">
+            {% if user.is_authenticated == False%}
+            <div class="header-menu-button"><a href="/login">войти</a></div>
+            <div class="header-menu-button"><a href="/register">регистрация</a></div>
+            {% else %}
+            <div class="header-menu-account"><a href="/profile">{{ user.username }}</a></div>
+        </div>
+        {% endif %}
+    </div>
+
+</header>
+<div class="main-container">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

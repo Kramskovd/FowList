@@ -1,0 +1,16 @@
+{% extends 'layout/basic.html' %}
+
+{% block content %}
+<div class="container-form-registration">
+  {% if user.is_authenticated %}
+    <p>Вход уже выролнен</p>
+  {% else %}
+    <h2>Регистрация</h2>
+  {% endif %}
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="регистрация" class="submit-join">
+  </form>
+</div>
+{% endblock %}

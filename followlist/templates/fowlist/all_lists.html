@@ -1,0 +1,22 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+{% block script %}<script src="{% static 'fowlist/js/all_lists.js' %}"></script>{% endblock %}
+{% block content %}
+<div class="all-lists">
+  {% for l in lists %}
+     <div class="default-list {% if l.0.type.pk == 1 %} list {% else %} dolist {% endif %}">
+            <div><img id="add-list{{ l.0.pk }}" class="add-list" src="{% static 'fowlist/img/Component 5.svg' %}"></div>
+            <div class="name-list"><p>{{ l.0 }}</p></div>
+            <div class="points">
+                <ul>
+                    {% for p in l.1 %}
+                         <li>
+                             <p>{{ p.name_point }}</p>
+                         </li>
+                    {% endfor %}
+                </ul>
+            </div>
+     </div>
+  {% endfor %}
+</div>
+{% endblock %}
